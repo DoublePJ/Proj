@@ -1,0 +1,145 @@
+/* Laws Component Styles */
+.laws-container {
+    padding: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+}
+
+.tags-stack {
+    margin-top: 0.75rem;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+/* Scrollbar track */
+.tags-stack::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.tags-stack::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px;
+}
+
+/* Scrollbar thumb (slider) */
+.tags-stack::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+.tags-stack::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Scrollbar arrow buttons */
+.tags-stack::-webkit-scrollbar-button {
+    display: none;
+    height: 0;
+    width: 0;
+}
+
+.bg-0474ba {
+    background-color: #0474ba !important;
+}
+
+.tag-badge {
+    font-size: 0.8rem;
+    margin-right: 8px;
+    padding: 6px 12px;
+    border-radius: 15px;
+}
+
+.laws-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    color: #007bff;
+}
+
+.laws-no-data {
+    text-align: center;
+    padding: 40px 20px;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.laws-header {
+}
+
+.laws-title {
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.laws-preface {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.laws-preface h3 {
+    margin-top: 0;
+    color: #f8f9fa;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.laws-preface p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.laws-structure {
+    padding: 0;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.laws-structure-title {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin: 0 0 25px 0;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #007bff;
+    position: relative;
+}
+
+.laws-structure-title::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #007bff, #6f42c1);
+}
+
+.laws-books-container {
+    margin-top: 20px;
+}
+
+.laws-book-item {
+    margin-bottom: 15px;
+}
+
+.laws-no-books {
+    text-align: center;
+    padding: 40px 20px;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 2px dashed #dee2e6;
+}

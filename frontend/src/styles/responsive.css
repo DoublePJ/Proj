@@ -1,0 +1,142 @@
+/* Responsive Design Utilities */
+/* Mobile-First Approach */
+
+/* Base mobile view (all devices) */
+* {
+  box-sizing: border-box;
+}
+
+/* Breakpoints */
+/* Mobile: 320px - 479px */
+/* Tablet: 480px - 767px */
+/* Desktop: 768px+ */
+
+/* iOS Safari specific fixes */
+input,
+textarea,
+select {
+  font-size: 1rem;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+button {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent auto-zoom on input focus */
+@media (max-width: 767px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea,
+  select {
+    font-size: 1rem;
+    -webkit-appearance: none;
+  }
+}
+
+/* Small mobile (320px - 479px) */
+@media (max-width: 479px) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    overflow-y: auto;
+  }
+}
+
+/* Regular mobile/tablet (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* Desktop and up (768px+) */
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Large desktop (1024px+) */
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Extra large screens (1440px+) */
+@media (min-width: 1440px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+/* Flexbox utilities */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Spacing utilities for mobile */
+@media (max-width: 479px) {
+  .mobile-padding-sm {
+    padding: 0.5rem;
+  }
+
+  .mobile-margin-sm {
+    margin: 0.5rem;
+  }
+}
+
+/* Touch-friendly sizing for mobile buttons */
+@media (max-width: 767px) {
+  button,
+  input[type="button"],
+  input[type="submit"],
+  a.button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+@media (max-width: 767px) {
+  body,
+  html {
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Safe area for notched devices */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-top: max(0px, env(safe-area-inset-top));
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}

@@ -1,0 +1,112 @@
+/* Judgment Component Styles */
+
+.judgment-container {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+/* Toggle Styles */
+/* Highlight Style */
+mark {
+    background-color: #ffeb3b;
+    padding: 2px 0;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+.toggle-on,
+.toggle-off {
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.toggle-on {
+    color: #0474ba;
+}
+
+.toggle-off {
+}
+
+.toggle-off:hover {
+    background-color: #f0f0f0;
+    border-color: #0474ba;
+}
+
+.laws-no-data {
+    text-align: center;
+    padding: 40px 20px;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.laws-title {
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+}
+
+.tags-stack {
+    margin-top: 0.75rem;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+/* Scrollbar track */
+.tags-stack::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.tags-stack::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px;
+}
+
+/* Scrollbar thumb (slider) */
+.tags-stack::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+.tags-stack::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Scrollbar arrow buttons */
+.tags-stack::-webkit-scrollbar-button {
+    display: none;
+    height: 0;
+    width: 0;
+}
+
+.bg-0474ba {
+    background-color: #0474ba !important;
+}
+
+.tag-badge {
+    font-size: 0.8rem;
+    margin-right: 8px;
+    padding: 6px 12px;
+    border-radius: 15px;
+}
+
+.laws-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    color: #007bff;
+}

@@ -1,0 +1,95 @@
+.leaf-container {
+    height: 100%;
+    margin-left: 5px;
+}
+@media (min-width: 820px) {
+    .leaf-container {
+        margin-left: 15px;
+    }
+}
+
+.leaf-content {
+    display: flex;
+}
+
+.leaf-non-section:hover {
+    scale: 1.02;
+}
+
+.leaf-title {
+    text-align: left;
+    font-weight: 600;
+    margin: 0;
+}
+
+.leaf-section-title {
+    text-align: left;
+    margin: 0;
+    font-weight: 400;
+    /* normal */
+}
+
+.loading-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    animation: spin 1s linear infinite;
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+.leaf-loading {
+    display: flex;
+    align-items: center;
+    margin: 6px 0 0 24px;
+    color: #6c757d;
+    gap: 6px;
+}
+
+.leaf-clickable {
+    cursor: pointer;
+}
+
+.button-link-reference {
+    color: #0474ba;
+    font: inherit;
+    line-height: inherit;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(to right, #f17720, #ebebeb, #0474ba);
+    background-size: 0 0.1em;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.button-link-reference:hover, .button-link-reference:focus {
+    background-size: 100% 0.1em;
+}
+
+.leaf-highlight {
+    background-color: #fff3cd;
+    /* soft yellow */
+    transition: background-color 0.8s ease;
+    scale: 1.02;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

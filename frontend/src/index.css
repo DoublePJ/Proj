@@ -1,0 +1,77 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Prompt", sans-serif;
+  font-size: clamp(14px, 2vw, 16px);
+  background-image: linear-gradient(135deg, #f17720, #ffa630, #ebebeb, #0a86af, #004671);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden; /* allow scrolling if content exceeds viewport */
+}
+
+#root {
+  height: 100%;
+}
+
+h1, .h1, .text-h1, .text-h1-without-color { font-size: 2rem; line-height: 2.5rem;}
+h2, .h2, .text-h2, .text-h2-without-color { font-size: 1.5rem; line-height: 2rem;}
+h3, .h3, .text-h3, .text-h3-without-color { font-size: 1.25rem; line-height: 1.75rem;}
+p, .p, .text-p, .text-p-without-color { font-size: 1rem; line-height: 1.5rem;}
+small, .small, .text-small, .text-small-without-color { font-size: 0.9rem; line-height: 1.4rem;}
+h1, h2, h3, p, small, .text-h1, .text-h2, .text-h3, .text-p, .text-small, .text-h1-without-color, .text-h2-without-color, .text-h3-without-color, .text-p-without-color, .text-small-without-color {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  font-weight: normal;
+  margin: 0;
+  font-family: "Prompt", sans-serif;
+}
+
+.h1, .h2, .h3, .p, .small {
+  font-family: "Prompt", sans-serif;
+}
+
+h1, h2, h3, p, small, .text-h1, .text-h2, .text-h3, .text-p, .text-small {
+  color: #0b4a66;
+}
+
+li {
+  font-family: "Prompt", sans-serif;
+}
+
+.landing-content {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  left: 2rem;
+  padding-top: 30px;
+  z-index: 0;
+  background: rgba(255,255,255,0.9);
+  border-radius: 2rem 2rem 2rem 2rem;
+  text-align: center;
+  overflow-y: auto;
+}

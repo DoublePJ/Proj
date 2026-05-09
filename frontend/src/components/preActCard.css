@@ -1,0 +1,44 @@
+.card-act {
+    margin-bottom: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-act:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+
+.pre-act-tags-stack {
+    width: 100%;
+    overflow: auto;
+    padding-bottom: 10px;
+}
+
+/* Scrollbar track */
+.pre-act-tags-stack::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.pre-act-tags-stack::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px;
+}
+
+/* Scrollbar thumb (slider) */
+.pre-act-tags-stack::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+.pre-act-tags-stack::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Scrollbar arrow buttons */
+.pre-act-tags-stack::-webkit-scrollbar-button {
+    display: none;
+    height: 0;
+    width: 0;
+}

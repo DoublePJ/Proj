@@ -1,0 +1,288 @@
+.navbar-container {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  left: 2rem;
+  height: 3rem;
+  background: rgba(255,255,255,0.9);
+  border-radius: 2rem 2rem 0 0;
+  padding: 0.75rem 1rem 0.75rem 1rem;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, #f17720, #ffa630, #ebebeb, #00a7e1, #0474ba);
+  border-image-slice: 1;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  box-sizing: border-box;
+  align-content: center;
+}
+
+.brand {
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.menu-btn {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-panel {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 2rem; /* top/right/bottom/left */
+  z-index: 100;
+  width: auto;
+  background: #fff;
+  border-radius: 2rem;
+  height: 100;
+  /* subtle slide-in */
+  animation: slideIn 220ms ease-out forwards;
+}
+
+.menu-panel.closing {
+  animation: slideOut 220ms ease-in forwards;
+}
+
+span.material-symbols-outlined {
+  color: #f19e39;
+}
+
+.menu-header {
+  justify-content: space-between;
+  /* padding: 10px; */
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, #f17720, #ffa630, #ebebeb, #00a7e1, #0474ba);
+  border-image-slice: 1;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  /* gap: 10px; */
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  max-height: 3rem;
+}
+
+.menu-logo {
+  height: 2rem;
+  width: 2rem;
+}
+
+.menu-footer {
+  /* padding: 10px; */
+  border-top: 1px solid transparent;
+  border-image: linear-gradient(to right, #f17720, #ffa630, #ebebeb, #00a7e1, #0474ba);
+  border-image-slice: 1;
+  align-content: center;
+  text-align: center;
+  height: 100%;
+  max-height: 3rem;
+  width: auto;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* reset button visuals for menu items so they look like divs but are keyboard-focusable */
+button.menu-item,
+button.menu-btn,
+button.close-btn {
+  background: none;
+  color: inherit;
+  font: inherit;
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(255,255,255,0.18);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 15px;
+  text-align: center;
+  align-items: center;
+  flex-grow: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.menu-block-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.menu-item {
+  text-decoration: none;
+  height: fit-content;
+  padding: 6px 10px;
+  width: 100%;
+  max-width: 300px;
+  align-items: center;
+  justify-items: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  border: 2px solid #1b3ca8;
+  border-radius: 15px;
+  transition: background-color 160ms ease, transform 120ms ease;
+  /* background-color: #f5f5f5; */
+  gap: 10px;
+}
+
+/* button.menu-item {
+  height: 40px;
+}
+.menu-item h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px;
+  width: 100%;
+  font-weight: normal;
+} */
+
+.menu-item:hover {
+  /* background-color: rgba(0, 134, 175, 0.25); */
+  background-color: rgba(0, 200, 255, 0.25);
+  color: #fff;
+}
+
+button.menu-item:active {
+  transform: translateY(1px);
+}
+
+.menu-subitem-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 0px 5px;
+  gap: 0px;
+  align-items: flex-end;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+}
+
+.menu-subitem {
+  position: relative;
+  display: flex;
+  margin-top: 5px;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.history-delete-btn {
+  background: none;
+  border: none;
+  padding: 2px 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.history-delete-btn .material-symbols-outlined {
+  color: #c24d2c;
+  font-size: 1.2rem;
+}
+
+.history-delete-btn:hover .material-symbols-outlined {
+  color: #ff5a2d;
+}
+
+.menu-subitem .material-symbols-outlined.rotate {
+  rotate: 90deg;
+}
+
+.menu-subitem:hover .material-symbols-outlined.rotate {
+  rotate: 0deg;
+}
+
+.menu-subitem .text-p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 3px 5px;
+  width: 100%;
+  margin: 0px;
+  right: 0px;
+  text-align: left;
+  /* border: 2px solid #d4a574;
+  border-radius: 12px; */
+}
+
+/* Desktop vs Mobile responsive rules
+   - Default: mobile UI (navbar-container, menu-panel) shown, desktop hidden
+   - On wider screens (>=768px): hide mobile UI and show desktop navbar
+*/
+
+.desktop-navbar {
+  display: none;
+}
+
+@media (min-width: 820px) {
+  /* hide mobile controls */
+  .navbar-container, .close-btn { 
+    display: none;
+   }
+  /* keep the panel visible on large screens and position as left sidebar */
+  .menu-panel {
+    display: none;
+  }
+  .menu-header {
+    grid-template-columns: 1fr 0fr 0fr;
+  }
+
+  /* show desktop nav */
+  .desktop-navbar { 
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    /* top/right/bottom/left: keep top/bottom/left gutters, allow right to be automatic */
+    inset: 2rem auto 2rem 2rem;
+    z-index: 90;
+    width: 25%;
+    max-width: 250px;
+    animation: none; /* disable slide animation on desktop */
+    border-radius: 2rem;
+    background: rgba(255,255,255,0.9);
+  }
+
+  /* reserve left gutter for desktop nav so main content sits to the right */
+  .landing-content {
+    margin-left: calc(min(250px, 25%) + 2rem); /* nav width + gap */
+    border-radius: 2rem;
+    padding-top: 0px;
+  }
+}
+
+/* slide-in animation used by .menu-panel */
+@keyframes slideIn {
+  from { transform: translateX(-8%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* slide-out animation used by .menu-panel */
+@keyframes slideOut {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(-8%); opacity: 0; }
+}

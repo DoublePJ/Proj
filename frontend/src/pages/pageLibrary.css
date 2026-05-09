@@ -1,0 +1,25 @@
+.library-content {
+    /* max-width: 800px; */
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+}
+
+.library-content h1 {
+    min-height: 60px;
+    height: auto;
+}
+
+.pre-content {
+    padding: 20px;
+    width: calc(100% - 40px);
+    flex: 1;
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+.pre-content::-webkit-scrollbar { display: none; } /* Chrome, Safari, Opera */

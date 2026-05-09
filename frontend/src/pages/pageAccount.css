@@ -1,0 +1,257 @@
+.page-account {
+    height: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: linear-gradient(180deg, #fff 0%, #f6f2ef 100%); */
+    padding: 24px;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+.account-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #124d67;
+    margin-bottom: 10px;
+    text-align: center;
+    height: 30px;
+}
+
+.account-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.account-form::-webkit-scrollbar { display: none; }
+.account-form { -ms-overflow-style: none; scrollbar-width: none; }
+
+.account-label {
+    color: #555;
+    display: block;
+}
+
+.account-input {
+    width: 100%;
+    max-width: 20rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #111;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    -webkit-appearance: none;
+    -webkit-border-radius: 4px;
+}
+
+.account-input:disabled {
+    background-color: #fff;
+    color: #111;
+    opacity: 1;
+    -webkit-text-fill-color: #111;
+}
+
+.account-input::placeholder {
+    color: #999;
+    -webkit-text-fill-color: #999;
+}
+
+.account-button {
+    width: 100%;
+    background: #0b4a66;
+    color: #fff;
+    border: none;
+    border-radius: 28px;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.account-button:disabled {
+    background: #888;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.account-button-logout {
+    width: 100%;
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 28px;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.account-button-logout:disabled {
+    background: #888;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Reset Password Button */
+.account-button-reset {
+    width: 100%;
+    background: #f0ad4e;
+    color: #fff;
+    border: none;
+    border-radius: 28px;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.account-button-reset:hover:not(:disabled) {
+    background: #ec971f;
+}
+
+.account-button-reset:disabled {
+    background: #888;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Reset Password Modal Overlay */
+.reset-password-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+/* Reset Password Modal */
+.reset-password-modal {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 10001;
+}
+
+/* Modal Header */
+.reset-password-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    background: #fff;
+}
+
+.reset-password-modal-header h2 {
+    margin: 0;
+    color: #124d67;
+    font-size: 20px;
+}
+
+.reset-password-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.reset-password-modal-close:hover {
+    color: #333;
+}
+
+/* Modal Body */
+.reset-password-modal-body {
+    padding: 20px;
+}
+
+/* Form Groups */
+.reset-password-form-group {
+    margin-bottom: 15px;
+}
+
+.reset-password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reset-password-description {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Error and Success Messages */
+.reset-password-error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #f5c6cb;
+}
+
+.reset-password-success {
+    background: #d4edda;
+    color: #155724;
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #c3e6cb;
+}
+
+/* Input */
+.reset-password-input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #111;
+    box-sizing: border-box;
+    background-color: #fff;
+    -webkit-appearance: none;
+    -webkit-border-radius: 4px;
+}
+
+.reset-password-input:focus {
+    outline: none;
+    border-color: #0b4a66;
+    box-shadow: 0 0 0 3px rgba(11, 74, 102, 0.1);
+}
+
+/* Option Buttons */
+.reset-password-option-button {
+    width: 100%;
+    margin-top: 10px !important;
+}
